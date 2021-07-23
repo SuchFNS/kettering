@@ -1,2 +1,2 @@
-# kettering
+# Kettering
 School stuff
