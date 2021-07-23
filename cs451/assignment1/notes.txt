@@ -1,0 +1,18 @@
+INFO TO FIND
+
+Process info:       location:
+S                   <pid>/stat      3rd arg
+UID                 <pid>/status    labelled UID
+PID                 folderNumber    
+PPID                <pid>/stat      4th arg
+C                   just print 0
+PRI                                 18th arg, convert from NI + 80
+NI                  <pid>/stat      19th arg, usually negative or 0 
+RSS                 <pid>/status    labelled vmRSS
+SZ                  <pid>/statm     1st column
+WCHAN               <pid>/wchan     only info in file
+TTY                 <pid>/stat      7th arg, check email she sent, seems like magic to me
+TIME                <pid>/stat      14th arg + 15th arg, add those and divide by sysconf(_SC_CLK_TCK), or hardcode as 100 bc fuck this
+CMD                 <pid>/stat      2nd arg, value is in parentheses
+
+All processes (PID) are in the numbered folders within /proc
