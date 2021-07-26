@@ -6,7 +6,7 @@ UID                 <pid>/status    labelled UID
 PID                 folderNumber    
 PPID                <pid>/stat      4th arg
 C                   just print 0
-PRI                                 18th arg, convert from NI + 80
+PRI                 <pid>/stat      18th arg, convert from NI + 80
 NI                  <pid>/stat      19th arg, usually negative or 0 
 RSS                 <pid>/status    labelled vmRSS
 SZ                  <pid>/statm     1st column
