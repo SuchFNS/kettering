@@ -24,7 +24,7 @@ struct Process {
     char wchan[20];
     char tty[10];
     char time[10];
-    char *cmd;
+    char cmd[50];
     int c;
 };
 
@@ -41,8 +41,8 @@ int readStat(int i, struct Process *list) {
     sprintf(filename, "%s/%d/%s", filename, i, "stat");
     fptr = fopen(filename, "r");
     if (fptr == NULL) {
-       //printf("couldnt open file %s\n", filename);
-       return(1);
+        //printf("couldnt open file %s\n", filename);
+        return(1);
     }
     if (fgets(line, 100, fptr) == NULL) {
         printf("error reading info from %s\n", filename);
@@ -54,31 +54,23 @@ int readStat(int i, struct Process *list) {
 
     char *buf;
     buf = strtok(line, " ");
-    column++;
     //add pid to process list
     list[i].pid = atoi(buf);
-    printf("%d\t", list[i].pid);
+    //printf("%d\t", list[i].pid);
     //get command name and remove parentheses
     buf = strtok(NULL, " ");
-    column++;
     buf++[strlen(buf)-1] = 0;
-    list[i].cmd = buf;
-    //printf("%s\t", list[i].cmd);
+    strcpy(list[i].cmd, buf);
 
     //get state of program
     strcpy(list[i].s, strtok(NULL, " "));
-    column++;
-    //printf("%s\t", list[i].s);
 
     //get ppid
     strcpy(list[i].ppid, strtok(NULL, " "));
-    column++;
-    //printf("%s\t", list[i].ppid);
 
     //get tty
     for (int j = 0; j < 3; j++) {
         buf = strtok(NULL, " ");
-        column++;
     }
     int tty_nr = atoi(buf);
     int major = MAJOR_OF(tty_nr);
@@ -88,29 +80,27 @@ int readStat(int i, struct Process *list) {
     } else if (major == 136) {
         sprintf(list[i].tty, "%s%d", "pts", minor);
     } else strcpy(list[i].tty, "?");
-    //printf("%s\t", list[i].tty);
 
     //get application time
     for (int j = 0; j < 7; j++) {
         buf = strtok(NULL, " ");
-        column++;
     }
     //divide by 100 from sysconf(_SC_CLK_TCK) getting clock ticks
     double ticks = (atof(buf) + atof(strtok(NULL, " "))) / sysconf(_SC_CLK_TCK);
-    column++;
     //TODO: convert ticks to hours, minutes, seconds
     //printf("ticks: %f\t", ticks);
-
+    double hours, minutes, seconds;
+    hours = ticks / 3600;
+    minutes = (ticks - hours*3600) / 60;
+    seconds = ticks - hours*3600 - minutes*60;
+    sprintf(list[i].time, "%0.0f:%0.0f:%0.0f", hours, minutes, seconds);
 
     //get NI and PRI
     for(int j = 0; j < 3; j++) {
         buf = strtok(NULL, " ");
-        column++;
     }
     list[i].ni = atoi(strtok(NULL, " "));
-    column++;
     list[i].pri = list[i].ni + 80;
-    //printf("pri: %d\tni: %d\t", list[i].pri, list[i].ni);
 
     fclose(fptr);
     return(0);
@@ -127,7 +117,7 @@ void readStatus(int i, struct Process *list) {
     sprintf(filename, "%s/%d/%s", filename, i, "status");
     fptr = fopen(filename, "r");
     if (fptr == NULL) {
-       printf("couldnt open file %s\n", filename);
+        printf("couldnt open file %s\n", filename);
     }
     buf = fgets(line, 100, fptr);
     if (buf == NULL) {
@@ -139,29 +129,7 @@ void readStatus(int i, struct Process *list) {
     }
     //tokenize and get first thing
     buf = strtok(buf, "\t");
-    printf("%s", buf);
     list[i].uid = atoi(strtok(NULL, "\t"));
-    printf("%d\t", list[i].uid);
-
-    //read until vmRSS is found
-    //TODO: fix this
-    /*
-    while(!rssFoundFlag || buf == NULL) {
-        printf("checking vmRSS: %s", buf);
-        if (strstr(buf, "VmRSS:")){
-            rssFoundFlag = 1;
-            continue;
-        }
-        buf = fgets(line, 100, fptr);
-    }
-    if (rssFoundFlag) {
-        //tokenize and get first thing
-        buf = strtok(buf, "\t");
-        printf("%s", buf);
-        list[i].rss = atoi(strtok(NULL, "\t"));
-        printf("%d", list[i].uid);
-    }else list[i].rss = -1;
-    */
 
     fclose(fptr);
 }
@@ -176,16 +144,18 @@ void readStatm(int i, struct Process *list) {
     sprintf(filename, "%s/%d/%s", filename, i, "statm");
     fptr = fopen(filename, "r");
     if (fptr == NULL) {
-       printf("couldnt open file %s\n", filename);
+        printf("couldnt open file %s\n", filename);
     }
     buf = fgets(line, 100, fptr);
     if (buf == NULL) {
         printf("error reading info from %s\n", filename);
     }
-    //tokenize the line
+    //tokenize the line to get size
     buf = strtok(line, " ");
     list[i].sz = atoi(buf);
-    //printf("%d", list[i].sz);
+    //tokenize the line to get resident size, *4 to adjust for kB
+    buf = strtok(NULL, " ");
+    list[i].rss = atoi(buf) * 4;
 
     fclose(fptr);
 }
@@ -205,14 +175,15 @@ void readWchan(int i, struct Process *list) {
     if (buf == NULL) {
         printf("error reading info from %s\n", filename);
     }
-    strcpy(list[i].wchan, buf);
-    //printf("%s", list[i].wchan);
+    if (!strcmp(buf, "0")) {
+        strcpy(list[i].wchan, "-");
+    } else strcpy(list[i].wchan, buf);
 }
 
 void printEntry(int i, struct Process *list) {
-    printf("\n");
-    printf("%s\t%d\t%d\t%s\t%d\t%d\t%d\t\n", list[i].s, list[i].uid, \
-            list[i].pid, list[i].ppid, list[i].c, list[i].pri, list[i].ni);
+    printf("%s\t%d\t%d\t%s\t", list[i].s, list[i].uid, list[i].pid, list[i].ppid);
+    printf("%d\t%d\t%d\t%d\t", list[i].c, list[i].pri, list[i].ni, list[i].rss);
+    printf("%d\t%s\t%s\t%s\t%s\n", list[i].sz, list[i].wchan, list[i].tty, list[i].time, list[i].cmd);
 }
 
 /*
@@ -228,19 +199,18 @@ int main(int argc, char* argv[]) {
     struct Process processList[32768];
 
     //print header:
-    printf("S\tUID\tPID\tPPID\tC\tPRI\tNI\tRSS\tSZ\tWCHAN\t\tTTY\tTIME\t\tCMD\n");
+    printf("S\tUID\tPID\tPPID\tC\tPRI\tNI\tRSS\tSZ\tWCHAN\tTTY\tTIME\tCMD\n");
 
     //max PID number = 32768, search all possible
     //TODO: change loop to take all PIDs
-    for(int i = 0; i <= 20; i++) {
+    for(int i = 0; i <= 32768; i++) {
         if (readStat(i, processList) != 0){
-            //printf("no file found for pid %d\n", i);
+            //no file found for PID i, skip to next
             continue;
         }
         readStatus(i, processList);
         readStatm(i, processList);
         readWchan(i, processList);
-
-        //printEntry(i, processList);
+        printEntry(i, processList);
     }
 }
