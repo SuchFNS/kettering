@@ -87,8 +87,6 @@ int readStat(int i, struct Process *list) {
     }
     //divide by 100 from sysconf(_SC_CLK_TCK) getting clock ticks
     double ticks = (atof(buf) + atof(strtok(NULL, " "))) / sysconf(_SC_CLK_TCK);
-    //TODO: convert ticks to hours, minutes, seconds
-    //printf("ticks: %f\t", ticks);
     double hours, minutes, seconds;
     hours = ticks / 3600;
     minutes = (ticks - hours*3600) / 60;
