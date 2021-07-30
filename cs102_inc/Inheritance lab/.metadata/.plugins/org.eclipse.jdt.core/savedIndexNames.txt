@@ -1,2 +1,0 @@
-INDEX VERSION 1.131+E:\Kettering Assignments\Hayvin's CS 102\Inheritance lab\.metadata\.plugins\org.eclipse.jdt.core
-858178207.index
