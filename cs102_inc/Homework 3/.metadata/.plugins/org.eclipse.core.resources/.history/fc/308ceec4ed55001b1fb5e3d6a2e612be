@@ -1,0 +1,40 @@
+package urMom;
+public class TestHolder {
+	private int[] testScores;
+	
+	public TestHolder(int studentCount) {
+		testScores = new int[studentCount];
+		for (int i=0;i<studentCount;i++) {
+			testScores[i] = (int) Math.floor(Math.random() * 101);
+		}
+	}
+
+	// Constructor above is 3a
+	
+	public String toString() {
+		String retVal = "Test scores for this class: ";
+		for (int i : testScores) {
+			retVal += i + " ";
+		}
+		return retVal;
+	}
+	
+	public boolean equals(TestHolder other) {
+		return other == this;
+	}
+	
+	public int[] getScores() {
+		return this.testScores;
+	}
+	
+	public void setScores(int[] testScores) {
+		this.testScores = testScores;
+	}
+	
+	// Everything above is 3b
+	
+	public static void main(String[] args) {
+		TestHolder b = new TestHolder(50);
+		System.out.println(b);
+	}
+}

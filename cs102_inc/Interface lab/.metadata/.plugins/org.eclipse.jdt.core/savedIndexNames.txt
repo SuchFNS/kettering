@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+E:\Kettering Assignments\Hayvin's CS 102\Interface lab\.metadata\.plugins\org.eclipse.jdt.core
+2455762627.index
