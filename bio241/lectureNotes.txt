@@ -1,0 +1,24 @@
+Process:
+Replication: 	DNA -> DNA 	
+	Enzymes + Definitions:
+		- Helicase: unwinds DNA
+		- Primase: lays down RNA primer
+		- DNA Polymerase III: main synthesis enzyme
+		- Ligase: fills gaps in DNA
+	Initiated / Terminated:
+		- 
+
+Transcription:	DNA -> RNA
+	Enzymes + Definitions:
+		- RNA polymerase: uses 1 strand of DNA as a template
+	Initiated / Terminated:
+		- Stops when the secondary structures form in the mRNA preventing from more reading.
+
+Translation:	mRNA -> protein		
+	Enzymes + Definitions:
+		- Ribosome: attach to mRNA to read the triplet code for base-pairing.
+	
+	
+Notes:
+	- 5' and 3' refer to strand polarity.
+	- mRNA is transcribed 3' to 5'

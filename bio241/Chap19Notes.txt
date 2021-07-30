@@ -1,0 +1,52 @@
+19.1
+	- Chromosomes: chromatin condensed into a compact structure.
+	- Chromatin: network of fine threads in the nucleus composed of DNA and proteins.
+	- Sister Chromatids: 1 of 2 genetically identical chromosomal units taht result from DNA replication.
+	- Centromere: area of a chromosome where sister chromatids are held together. 
+	
+19.2
+	- Cell Cycle: repeating sequence of cellular events taht consists of interphase, mitosis, and cytokinesis.
+	- Interphase: cell cycle stage during which growth and DNA synthesis occur when nucleus is not dividing.
+	- Mitosis: type of cell division in which daughter cells receive the exact chromosomal and genetic makeup.
+	- Cytokinesis: division of the cytoplasm following mitosis and meiosis.
+	- Apoptosis: programmed cell death involving a cascade of specific cellular events leading to death of a cell.
+	- Checkpoints: regulatory location in the cell cycle at which the cell assesses whehter to proceed with division.
+
+19.3
+	- Parent Cell: cell that divides to form daughter cells.
+	- Daughter Cell: Cell that arises from a parent cell by mitosis or meiosis.
+	- Diploid: cell condition in which 2 of each type of chromosome are present in the nucleus.
+	- Centrosome: central microtuble organizing center of cells. animal cells have 2.
+	- Miotic Spindle: structure consisting of centrosomes and microtubules that brings about chromosomal movement.
+	- Centrioles: cellular structure existing in pairs, that possibly organizes the mitotic spindle for chromosomal movement during mitosis and meiosis.
+	- Prophase: Phase of nuclear division which chromatin condenses s that chromosomes appear and the nuclear envelope dissolves.
+	- Prometahphase: stage of mitosis where the spindle fibers attach to the centromeres of the crhomosomes before entering metaphase.
+	- Metaphase: mitotic phase during which chromosomes are aligned at the equator of the mitotic spindle.
+	- Anaphase: mitotic phase during which daughter chromosomes move toward the poles of the spindle.
+	- Telophase: mitotic phase during which daughter chromosomes are located at each pole.
+	- Cleavage Furrow: indentation that begins the process of cleavage, by which human cells undergo cytokinesis.
+
+19.4
+	- Meiosis: type of nuclear division thatt occrus as part of sexual reproduction in which the daughter cells receive the haploid number of chromosomes in varied combinations
+	- Haploid: the n number of chromosomes. half the diploid number of crhomosomes. 
+	- Homologous Chromosomes: member of a pair of chromosomes that are alike and come together in synapsis during prophase of the first meiotic division.
+	- Synapsis: pairing of homologous chromosomes during prophase I of meiosis I. allows for cross-over.
+	- Interkinesis: period between meiosis I and meiosis II, during which no DNA replication takes place.
+	- Crossing-Over: exchange of genetic material between nonsister chromatids of a tetrad during meiosis.
+	- Spermatogenesis: production of sperm in males by the process of meiosis and maturation.
+	- Oogenesis: production of an egg in females by the process of meiosis and maturation.
+
+19.5
+	- Meiosis includes phases I and II, which results in 4 sister chromatids
+	- Mitosis is one process that produces 2 daughter cells.
+
+19.6
+	- Nondisjunction: failure of homologous chromosomes or daughter chromosomes to separate during meiosis I and II.
+	- Trisomy: condition that is characterized by a diploid cell that has 3 copies of a chromosome as a result of nondisjunction.
+	- Monosomy: condition that is characterized by a diploid cell that has 1 copy of a chromosome as a result of nondisjunction.
+	- Barr Body: dark staining body in the nuclei of female mammals that contains a condensed, inactive X chromosome.
+	- Deletion: change in chromosome structure in which the end of a chromosome breaks off or 2 simultaneous breaks lead to the loss of an internal segment.
+	- Duplication: change in chromosome structure in which a particular segment is present more than once in the same chromosome.
+	- Inversion: change in chromosome structure in which a particular segment is turned around 180degrees.
+	- Translocation: movement of a chromosomal segment from one chromosome to another nonhomolougous chromosome (downsyndrome).
+	
