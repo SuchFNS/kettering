@@ -1,0 +1,111 @@
+Employee Name: 		Lane Holden
+Employee Code: 		124578
+Payrate: 		8.90
+Hours Worked: 		45.00
+Income before Taxes:	422.75
+   Federal Income Tax 		63.41
+   State Income Tax 		21.14
+   Social Security Tax 		31.71
+   Medicare Tax 		6.34
+Icome After Tax 	300.15
+
+Employee Name: 		Alex Peoples
+Employee Code: 		854621
+Payrate: 		11.90
+Hours Worked: 		54.00
+Income before Taxes:	118952.40
+   Federal Income Tax 		17842.86
+   State Income Tax 		5947.62
+   Social Security Tax 		8921.43
+   Medicare Tax 		1784.29
+Icome After Tax 	84456.20
+
+Employee Name: 		Gloria Roper
+Employee Code: 		845791
+Payrate: 		14.90
+Hours Worked: 		61.00
+Income before Taxes:	1065.35
+   Federal Income Tax 		159.80
+   State Income Tax 		53.27
+   Social Security Tax 		79.90
+   Medicare Tax 		15.98
+Icome After Tax 	756.40
+
+Employee Name: 		Brice Diligant
+Employee Code: 		984517
+Payrate: 		8.90
+Hours Worked: 		34.00
+Income before Taxes:	302.60
+   Federal Income Tax 		45.39
+   State Income Tax 		15.13
+   Social Security Tax 		22.70
+   Medicare Tax 		4.54
+Icome After Tax 	214.85
+
+Invalid Paycode for Victoria Wellen
+Employee Name: 		Victoria Wellen
+Employee Code: 		213564
+Payrate: 		0.00
+Hours Worked: 		51.00
+Income before Taxes:	0.00
+   Federal Income Tax 		0.00
+   State Income Tax 		0.00
+   Social Security Tax 		0.00
+   Medicare Tax 		0.00
+Icome After Tax 	0.00
+
+Employee Name: 		Oscar Sulard
+Employee Code: 		652147
+Payrate: 		14.90
+Hours Worked: 		48.00
+Income before Taxes:	774.80
+   Federal Income Tax 		116.22
+   State Income Tax 		38.74
+   Social Security Tax 		58.11
+   Medicare Tax 		11.62
+Icome After Tax 	550.11
+
+Employee Name: 		Samual Chaplin
+Employee Code: 		231987
+Payrate: 		8.90
+Hours Worked: 		39.00
+Income before Taxes:	347.10
+   Federal Income Tax 		52.07
+   State Income Tax 		17.36
+   Social Security Tax 		26.03
+   Medicare Tax 		5.21
+Icome After Tax 	246.44
+
+Employee Name: 		Brianna Niven
+Employee Code: 		763452
+Payrate: 		14.90
+Hours Worked: 		51.00
+Income before Taxes:	841.85
+   Federal Income Tax 		126.28
+   State Income Tax 		42.09
+   Social Security Tax 		63.14
+   Medicare Tax 		12.63
+Icome After Tax 	597.71
+
+Employee Name: 		Dani Kollin
+Employee Code: 		892341
+Payrate: 		11.90
+Hours Worked: 		42.00
+Income before Taxes:	16993.20
+   Federal Income Tax 		2548.98
+   State Income Tax 		849.66
+   Social Security Tax 		1274.49
+   Medicare Tax 		254.90
+Icome After Tax 	12065.17
+
+Employee Name: 		Alastair Palmatier
+Employee Code: 		234876
+Payrate: 		8.90
+Hours Worked: 		38.00
+Income before Taxes:	338.20
+   Federal Income Tax 		50.73
+   State Income Tax 		16.91
+   Social Security Tax 		25.36
+   Medicare Tax 		5.07
+Icome After Tax 	240.12
+

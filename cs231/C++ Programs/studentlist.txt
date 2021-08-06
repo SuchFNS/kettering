@@ -1,0 +1,16 @@
+Fred Farkle 72 69 17 21 23 14 22
+Tina Moffett 81 86 23 25 19 25 28
+Lois Lepler 98 91 25 23 24 21 25
+Brett Lyons 61 56 21 14 18 23 20
+Alex Stark 81 72 19 23 21 12 21
+Sandy Reardon 78 81 22 19 25 17 29
+Jordan Taglauer 66 52 17 15 19 21 18
+Rhonda Bellamy 91 92 23 24 21 19 22
+Connor Sellers 78 83 22 25 19 21 21
+Alice Legrow 99 73 21 18 16 26 19
+Paul Richards 78 56 12 16 18 13 22
+Adam Soleski 87 65 17 17 23 16 24
+April Lanford 77 83 21 23 20 19 28
+Bruce Wagner 89 90 20 20 19 24 29
+Leslie Gore 56 87 14 21 17 23 24
+George Whittaker 66 77 20 20 17 23 25
