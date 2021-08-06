@@ -1,0 +1,30 @@
+Network Forensics Notes
+
+What is Computer Forensics?
+	- CIA Triad
+		- Confidentiality, Integrity, Availability
+	
+	- Confidentiality:
+		- Encryption
+	- Integrity:
+		- has not been altered in an unauthorized way
+		- uses backups, checksums, hashing, MAC and HMAC
+	- Availability:
+		- computational redundancies, like RAID and load balancers, backups
+	- In addition:
+		- authentication, authorization, non-repudiation
+	
+Goals of Computer Forensics:
+	- forensics is relating to the use of scientific knowledge or methods in solving crimes
+	- acquire data even if the original owner does not want to leak that data
+		- breach the security goal of confidentiality
+	
+	- 2 main elements:
+		- Process:
+			- how to acquire, handle and analyze evidence
+			- what precautions to take
+			- difference between evidence being admissible
+		- Technical Knowledge:
+			- deep understanding of the specific technology you need to extract the information
+				- how is data stored at the binary level
+
