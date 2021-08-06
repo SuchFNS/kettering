@@ -1,0 +1,102 @@
+[ec2-user@ip-172-31-11-234 quinn2]$ python capitalize.py
+Give me a sentence and I will say it back capitalized:
+hello there, this is a sentence that should be capitalized, thank you!
+Hello There, This Is A Sentence That Should Be Capitalized, Thank You!
+
+------------------------------------------------------------------------
+
+[ec2-user@ip-172-31-11-234 quinn2]$ python hangman.py dictionary.txt
+You are now playing Hangman! Your score is 500points.
+You win if you get 1000 points, and lose if you go negative
+or run out of words.. Best of luck!
+
+I have picked a word. Please guess letters of the word.
+The goal is to guess the word without missing more than 6 guesses.
+Your Guessed Word : _ _ _ _ _ _ _ _
+Previously Guessed Letters:
+Number of tries left:   6
+
+
+Guess a letter: d
+
+Correct, d is in the word
+Your Guessed Word : _ _ _ _ _ _ _ d
+Previously Guessed Letters:  d
+Number of tries left:   6
+
+
+Guess a letter: r
+
+Correct, r is in the word
+Your Guessed Word : _ _ _ _ _ _ r d
+Previously Guessed Letters:  d r
+Number of tries left:   6
+
+
+Guess a letter: a
+
+Correct, a is in the word
+Your Guessed Word : _ _ _ _ _ a r d
+Previously Guessed Letters:  d r a
+Number of tries left:   6
+
+
+Guess a letter: o
+
+Correct, o is in the word
+Your Guessed Word : _ _ _ _ o a r d
+Previously Guessed Letters:  d r a o
+Number of tries left:   6
+
+
+Guess a letter: b
+
+Correct, b is in the word
+Your Guessed Word : _ _ _ b o a r d
+Previously Guessed Letters:  d r a o b
+Number of tries left:   6
+
+
+Guess a letter: m
+
+Sorry, m is incorrect
+Your Guessed Word : _ _ _ b o a r d
+Previously Guessed Letters:  d r a o b m
+Number of tries left:   5
+
+
+Guess a letter: k
+
+Correct, k is in the word
+Your Guessed Word : k _ _ b o a r d
+Previously Guessed Letters:  d r a o b m k
+Number of tries left:   5
+
+
+Guess a letter: e
+
+Correct, e is in the word
+Your Guessed Word : k e _ b o a r d
+Previously Guessed Letters:  d r a o b m k e
+Number of tries left:   5
+
+
+Guess a letter: y
+
+Correct, y is in the word
+Nice work, you guessed the word!!!
+After this round, your score is 539 points.
+
+
+I have picked a word. Please guess letters of the word.
+The goal is to guess the word without missing more than 6 guesses.
+Your Guessed Word : _ _ _ _ _ _ _ _ _
+Previously Guessed Letters:
+Number of tries left:   6
+
+
+Guess a letter:
+... and so on ...
+
+-------------------------------------------------------------------------
+

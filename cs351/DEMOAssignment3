@@ -1,0 +1,287 @@
+------------Chat client 1-------------
+[ec2-user@ip-172-31-11-234 quinn3]$ python chatClient.py 172.31.11.234 10000
+Connected to remote host. You can start sending messages
+[Me] [172.31.11.234:34638] entered our chatting room
+[('172.31.11.234', 34638)] hello
+[Me] how are you today?
+[Me] quite swell, and you?
+[('172.31.11.234', 34638)] working on studying for finals
+[Me] me as well, best of luck!
+[('172.31.11.234', 34638)] right back at you :)
+[Me] bye
+
+-----------Chat client 2---------------
+[ec2-user@ip-172-31-11-234 quinn3]$ python chatClient.py 172.31.11.234 10000
+Connected to remote host. You can start sending messages
+[Me] hello
+[('172.31.11.234', 34636)] how are you today?
+[('172.31.11.234', 34636)] quite swell, and you?
+[Me] working on studying for finals
+[('172.31.11.234', 34636)] me as well, best of luck!
+[Me] right back at you :)
+[('172.31.11.234', 34636)] bye
+[Me]
+Disconnected from chat server
+
+-------------Chat Server---------------
+[ec2-user@ip-172-31-11-234 quinn3]$ Chat server started on port 10000
+Client (172.31.11.234, 34636) connected
+Client (172.31.11.234, 34638) connected
+
+-----------------------------------------------------------------------------
+--------------Tic Tac Toe Client: Team X-----------
+[ec2-user@ip-172-31-11-234 quinn3]$ python ticTacClient.py 172.31.11.234 10000
+Connected! Get ready to play!
+
+Team X's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ _ _ _ _ _ _ _
+5 _ _ _ _ _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ _ _ _ _
+9 _ _ _ _ _ _ _ _ _
+  1 2 3 4 5 6 7 8 9
+
+You've joined team X! Best of luck!
+
+New player connected!
+
+Each team has players, we can start now!  Team X enter your location: (x,y)
+(4,5)
+
+
+Team O's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ _ _ _ _ _ _ _
+5 _ _ _ X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ _ _ _ _
+9 _ _ _ _ _ _ _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Team O enter your coordinates
+
+
+Team X's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ _ _ _ _ _ _ _
+5 _ _ _ X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ _ _ _ _
+9 _ _ _ _ _ O _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Team X enter your coordinates
+(3,5
+
+Input is not valid, please enter a previously unselected position
+of the form (x,y) to choose a spot to play.
+Invalid data entered, please try again
+(3,5)
+
+
+Team O's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ _ _ _ _ _ _ _
+5 _ _ X X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ _ _ _ _
+9 _ _ _ _ _ O _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Team O enter your coordinates
+
+
+Team X's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ _ _ _ _ _ _ _
+5 _ _ X X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ O _ _ _
+9 _ _ _ _ _ O _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Team X enter your coordinates
+(3,5)
+
+Input is not valid, please enter a previously unselected position
+of the form (x,y) to choose a spot to play.
+Invalid data entered, please try again
+(3,4)
+
+
+Team O's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ X _ _ _ _ _ _
+5 _ _ X X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ O _ _ _
+9 _ _ _ _ _ O _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Team O enter your coordinates
+
+Team O is the winner! Congrats!
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ X _ _ _ _ _ _
+5 _ _ X X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ O _ _ _
+8 _ _ _ _ _ O _ _ _
+9 _ _ _ _ _ O _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Game over! Server will quit in 3 seconds...
+3..
+2..
+1..
+
+Server closed
+
+The server has disconnected
+
+--------------Tic Tac Toe Client: Team 0----------
+[ec2-user@ip-172-31-11-234 quinn3]$ python ticTacClient.py 172.31.11.234 10000
+Connected! Get ready to play!
+
+Team X's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ _ _ _ _ _ _ _
+5 _ _ _ _ _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ _ _ _ _
+9 _ _ _ _ _ _ _ _ _
+  1 2 3 4 5 6 7 8 9
+
+You've joined team O! Best of luck!
+
+Each team has players, we can start now!  Team X enter your location: (x,y)
+
+
+Team O's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ _ _ _ _ _ _ _
+5 _ _ _ X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ _ _ _ _
+9 _ _ _ _ _ _ _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Team O enter your coordinates
+(6,9)
+
+
+Team X's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ _ _ _ _ _ _ _
+5 _ _ _ X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ _ _ _ _
+9 _ _ _ _ _ O _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Team X enter your coordinates
+
+
+Team O's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ _ _ _ _ _ _ _
+5 _ _ X X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ _ _ _ _
+9 _ _ _ _ _ O _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Team O enter your coordinates
+(6,8)
+
+
+Team X's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ _ _ _ _ _ _ _
+5 _ _ X X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ O _ _ _
+9 _ _ _ _ _ O _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Team X enter your coordinates
+
+
+Team O's turn
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ X _ _ _ _ _ _
+5 _ _ X X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ _ _ _ _
+8 _ _ _ _ _ O _ _ _
+9 _ _ _ _ _ O _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Team O enter your coordinates
+(6,7)
+
+Team O is the winner! Congrats!
+1 _ _ _ _ _ _ _ _ _
+2 _ _ _ _ _ _ _ _ _
+3 _ _ _ _ _ _ _ _ _
+4 _ _ X _ _ _ _ _ _
+5 _ _ X X _ _ _ _ _
+6 _ _ _ _ _ _ _ _ _
+7 _ _ _ _ _ O _ _ _
+8 _ _ _ _ _ O _ _ _
+9 _ _ _ _ _ O _ _ _
+  1 2 3 4 5 6 7 8 9
+
+Game over! Server will quit in 3 seconds...
+3..
+2..
+1..
+
+Server closed
+
+The server has disconnected
+
+-------------Tic Tac Toe Server------------
+[ec2-user@ip-172-31-11-234 quinn3]$ Game starting! The connection port is: 10000
+Client connected from ('172.31.11.234', 34644)
+Client connected from ('172.31.11.234', 34646)
+
+[3]+  Done                    python34 ticTacServer.py 10000

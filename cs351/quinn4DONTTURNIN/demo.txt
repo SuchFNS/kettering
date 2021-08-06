@@ -1,0 +1,76 @@
+-------server.py:
+[ec2-user@ip-172-31-11-234 quinn4]$ python server.py 3333 &
+[5] 2830
+[ec2-user@ip-172-31-11-234 quinn4]$ User Connected from address: ('172.31.11.234', 55058)
+The connected server peer is at port: 4444
+User Connected from address: ('172.31.11.234', 55060)
+[ec2-user@ip-172-31-11-234 quinn4]$
+
+
+-------clientChristie.py:
+[ec2-user@ip-172-31-11-234 quinn4]$ python clientChristie.py 172.31.11.234 3333 4444
+Thank you for connecting from Torrent Server
+Torrent server says that I am the host peer
+New Connection from client peer
+Sent a message to new client peer, Hi! it is nice to meet you!
+Message received from client peer: Nice to meet you as well!
+My book data has been sent to the new peer
+Word            Count
+there           1146
+which           783
+would           620
+other           493
+about           452
+though          435
+still           378
+little          373
+before          372
+could           354
+after           348
+again           318
+first           294
+where           288
+never           288
+through         287
+should          274
+might           251
+right           220
+thought         214
+night           210
+
+
+-------clientMelville.py:
+[ec2-user@ip-172-31-11-234 quinn4]$ python clientMelville.py  172.31.11.234 3333
+Thank you for connecting from Torrent Server
+Torrent server says that I am a peer
+Requesting host peer's IP address
+Received IP address: 172.31.11.234
+Requesting host peer's port number
+Received port: 4444
+Connecting to the server peer
+Connection Accepted
+Message received from server peer: Hi! It is nice to meet you!
+Sent a message to server peer
+My book data has been sent
+Word            Count
+there           1146
+which           783
+would           620
+other           493
+about           452
+though          435
+still           378
+little          373
+before          372
+could           354
+after           348
+again           318
+first           294
+never           288
+where           288
+through         287
+should          274
+might           251
+right           220
+thought         214
+night           210
