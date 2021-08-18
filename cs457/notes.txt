@@ -2,8 +2,9 @@ IP addresses:
 	Class A: N.H.H.H
 	Class B: N.N.H.H
 	Class C: N.N.N.H
-	
+
 	first octet:
 		0-127 is class A
 		128-191 is class B
 		192-223 is class C
+
