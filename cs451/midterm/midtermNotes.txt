@@ -1,0 +1,40 @@
+Chap: 1,2,3,5
+
+Chap 5: 
+	CPU schedulers
+	CPU burst and IO
+	When do schedulers run?
+	criteria for scheduler
+	Gant chart and TAT, WT, and RT
+	FCFS, SJF, SRTF
+	Priority based
+	Round robin scheduling
+	Multi level queues and feedback queues
+	How does Linux schedule?
+
+Chap 3: Intro to Processes
+	process vs. RAM
+	process vs. program
+	PCB: process control block
+	state transition diagram
+	process related queues -> device, ready, etc...
+	Schedulers (long term, medium term, short term)
+	process creation -> fork, exec, wait
+	process suspension
+	process destruction -> zombie, orphan processes
+
+Chap 2: Intro to OS
+	Major components
+		precision, memory, IO, disk management, file system management
+	System calls and their implementation
+	CLI vs. GUI
+	System calls, C calls, system programs
+
+Chap 1: Intro to Architecture
+	CPU, controllers, all work together
+	Interrupts
+	Traps
+	OS, kernel, application program definitions
+	mode bit
+	timer
+	device status table
