@@ -1,0 +1,99 @@
+$ ./a.out input.txt
+
+Scheduler: Current time: 0 seconds
+
+Scheduler: Current time: 1 seconds
+Scheduler: New process 0 arrived with a burst of 7 seconds
+Scheduler: Process 0 has burst 7 seconds
+Child: New process: 0. Beginning prime search at: 1134570643
+
+Scheduler: Current time: 2 seconds
+Scheduler: New process 1 arrived with a burst of 4 seconds
+Scheduler: Suspending Process 0 with remaining time 6 seconds
+Scheduler: Process 1 has burst 4 seconds
+Child: New process: 1. Beginning prime search at: 1903176659
+
+Scheduler: Current time: 3 seconds
+
+Scheduler: Current time: 4 seconds
+Scheduler: New process 2 arrived with a burst of 6 seconds
+
+Scheduler: Current time: 5 seconds
+
+Scheduler: Current time: 6 seconds
+Scheduler: Terminating process 1
+Scheduler: New process 3 arrived with a burst of 4 seconds
+Scheduler: Process 3 has burst 4 seconds
+
+Child: Process 1: PID: 110147: I am getting terminated.
+	Child: The highest prime I have found is: 1903176663
+Child: New process: 3. Beginning prime search at: 2821107172
+
+Scheduler: Current time: 7 seconds
+Scheduler: New process 4 arrived with a burst of 2 seconds
+Scheduler: Suspending Process 3 with remaining time 3 seconds
+Scheduler: Process 4 has burst 2 seconds
+Child: New process: 4. Beginning prime search at: 2528695511
+
+Scheduler: Current time: 8 seconds
+
+Scheduler: Current time: 9 seconds
+Scheduler: Terminating process 4
+Scheduler: Resuming process 3 with remaining burst of 3 seconds
+
+Child: Process 3: PID: 110149: I am continuing execution.
+	Child: The highest prime I have found is: 2821107172
+
+Child: Process 4: PID: 110150: I am getting terminated.
+	Child: There have been no primes found yet
+
+Scheduler: Current time: 10 seconds
+
+Scheduler: Current time: 11 seconds
+
+Scheduler: Current time: 12 seconds
+Scheduler: Terminating process 3
+Scheduler: Resuming process 0 with remaining burst of 6 seconds
+
+Child: Process 0: PID: 110146: I am continuing execution.
+	Child: The highest prime I have found is: 1134570643
+
+Child: Process 3: PID: 110149: I am getting terminated.
+	Child: The highest prime I have found is: 2821107172
+
+Scheduler: Current time: 13 seconds
+
+Scheduler: Current time: 14 seconds
+
+Scheduler: Current time: 15 seconds
+
+Scheduler: Current time: 16 seconds
+
+Scheduler: Current time: 17 seconds
+
+Scheduler: Current time: 18 seconds
+Scheduler: Terminating process 0
+Scheduler: Process 2 has burst 6 seconds
+
+Child: Process 0: PID: 110146: I am getting terminated.
+	Child: The highest prime I have found is: 1134570643
+Child: New process: 2. Beginning prime search at: 2400674311
+
+Scheduler: Current time: 19 seconds
+
+Scheduler: Current time: 20 seconds
+
+Scheduler: Current time: 21 seconds
+
+Scheduler: Current time: 22 seconds
+
+Scheduler: Current time: 23 seconds
+
+Scheduler: Current time: 24 seconds
+Scheduler: Terminating process 2
+
+Child: Process 2: PID: 110154: I am getting terminated.
+	Child: The highest prime I have found is: 2400674312
+
+Scheduler: Current time: 24 seconds
+Scheduling is done, exiting
