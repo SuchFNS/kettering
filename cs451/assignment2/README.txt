@@ -6,4 +6,4 @@ In order to run these programs, both prime.c and srtfScheduler.c must be compile
 	3. Compile `prime.c` into `prime.o` by running the command `gcc prime.c -o prime.o`.
 	4. Compile `srtfScheduler.c` into `a.out` by running the command `gcc srtfScheduler.c`.
 	5. Run the program by typing `./a.out input.txt` in the console.
-	
+		- execution should last for about 25 seconds with updates every second.s
