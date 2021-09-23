@@ -58,18 +58,35 @@ int main(int argc, char* argv[]) {
 
 }
 
+//the main loop of the program, handles UI and calls needed functions
 void getUserInput() {
     int doneFlag = 0;
     char *buf;
     size_t len = 0;
     size_t chars;
 
+    //create string to store input
     buf = (char*)malloc(bufSize * sizeof(char));
     if (buf == NULL) {
         printf("ERROR: unable to allocate buffer.");
         exit(1);
     }
+
+    //main loop of program
     while (!doneFlag) {
+
+//TODO: print list?
+int imSad = 0;
+struct memoryBlock* currNode = head;
+printf("Current list information:\n");
+while (!imSad) {
+    printf("\t");
+    printBlockInfo(currNode);
+    if (currNode->next == NULL) {
+        imSad = 1;
+    }else currNode = currNode->next;
+}
+
         //get user input
         printf("Allocator > ");
         chars = getline(&buf, &len, stdin);
@@ -270,8 +287,8 @@ struct memoryBlock* mergeGapNodes(struct memoryBlock* currNode, struct memoryBlo
 struct memoryBlock* firstFit(char *id, int size) {
     struct memoryBlock *currNode = head;
     struct memoryBlock *newNode = NULL;
-    int endOfList = 0;
-    while(!endOfList) {
+
+    while(1) {
         if (strncmp(currNode->id, gapName, strlen(gapName)) == 0) {
             int currSize = getSize(currNode);
             if (currSize >= size) {
@@ -282,7 +299,7 @@ struct memoryBlock* firstFit(char *id, int size) {
         }
         //check to escape loop
         if (currNode->next == NULL) {
-            endOfList = 1;
+            break;
         } else currNode = currNode->next;
     }
     return NULL;
@@ -295,7 +312,6 @@ struct memoryBlock* bestFit(char* id, int size) {
     struct memoryBlock* node;
     int bestFitSize = INT_MAX;
     int placeFound = 0;
-
 
     while (1) {
         if (strncmp(currNode->id, gapName, strlen(gapName)) == 0) {
@@ -314,9 +330,7 @@ struct memoryBlock* bestFit(char* id, int size) {
     //place the new node in the bestfit location
     struct memoryBlock* newNode = NULL;
     if (placeFound) {
-        
         newNode = insertNode(node, id, size);
-        printf("calling best fit withs %s", newNode->id);
     }
     return newNode;
 }
@@ -350,16 +364,16 @@ struct memoryBlock* worstFit(char* id, int size) {
 }
 
 //utility function to create a new node in the linked list
-struct memoryBlock* insertNode(struct memoryBlock* node, char* id, int size) {
+struct memoryBlock* insertNode(struct memoryBlock* node, char* idInput, int size) {
     if (getSize(node) == size) {
-        printf("Inputting ID: %s\n", id);
-        node->id = id;
+        printf("Inputting ID: %s\n", idInput);
+        node->id = idInput;
         printf("ID saved as: %s\n", node->id);
         return node;
     } else {
-        printf("Inputting ID: %s\n", id);
+        printf("Inputting ID: %s\n", idInput);
         struct memoryBlock* newNode = (struct memoryBlock*)malloc(sizeof(memoryBlock));
-        newNode->id = id;
+        newNode->id = idInput;
         newNode->startLocation = node->endLocation - size;
         newNode->endLocation = node->endLocation;
         newNode->next = node->next;
